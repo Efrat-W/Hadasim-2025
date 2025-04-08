@@ -1,0 +1,125 @@
+{
+  "Version": 1,
+  "Hash": "4AFzQq0ygDNd4P/uINNPtk3LEZL726zMDILIZVp53IQ=",
+  "Source": "WebApplication1",
+  "BasePath": "_content/WebApplication1",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "WebApplication1\\wwwroot",
+      "Source": "WebApplication1",
+      "ContentRoot": "C:\\Users\\Efrat\\source\\repos\\SupplyManagement\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Efrat\\source\\repos\\SupplyManagement\\WebApplication1\\wwwroot\\html\\ownerIndex.html",
+      "SourceId": "WebApplication1",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Efrat\\source\\repos\\SupplyManagement\\WebApplication1\\wwwroot\\",
+      "BasePath": "_content/WebApplication1",
+      "RelativePath": "html/ownerIndex#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "v7q97qev4g",
+      "Integrity": "+5vPkPsXv4IRLsj0rbSTtWFZe2B3SYy2Xo/bDYQZL2k=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\html\\ownerIndex.html"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "html/ownerIndex.html",
+      "AssetFile": "C:\\Users\\Efrat\\source\\repos\\SupplyManagement\\WebApplication1\\wwwroot\\html\\ownerIndex.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3161"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+5vPkPsXv4IRLsj0rbSTtWFZe2B3SYy2Xo/bDYQZL2k=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 14:50:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+5vPkPsXv4IRLsj0rbSTtWFZe2B3SYy2Xo/bDYQZL2k="
+        }
+      ]
+    },
+    {
+      "Route": "html/ownerIndex.v7q97qev4g.html",
+      "AssetFile": "C:\\Users\\Efrat\\source\\repos\\SupplyManagement\\WebApplication1\\wwwroot\\html\\ownerIndex.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3161"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+5vPkPsXv4IRLsj0rbSTtWFZe2B3SYy2Xo/bDYQZL2k=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 14:50:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "v7q97qev4g"
+        },
+        {
+          "Name": "label",
+          "Value": "html/ownerIndex.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+5vPkPsXv4IRLsj0rbSTtWFZe2B3SYy2Xo/bDYQZL2k="
+        }
+      ]
+    }
+  ]
+}
