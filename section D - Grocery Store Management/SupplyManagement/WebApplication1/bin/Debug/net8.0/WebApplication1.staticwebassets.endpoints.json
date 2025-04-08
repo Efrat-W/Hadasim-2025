@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "ManifestType": "Build",
+  "Endpoints": [
+    {
+      "Route": "html/ownerIndex.html",
+      "AssetFile": "html/ownerIndex.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3161"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+5vPkPsXv4IRLsj0rbSTtWFZe2B3SYy2Xo/bDYQZL2k=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 14:50:07 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-+5vPkPsXv4IRLsj0rbSTtWFZe2B3SYy2Xo/bDYQZL2k="
+        }
+      ]
+    },
+    {
+      "Route": "html/ownerIndex.v7q97qev4g.html",
+      "AssetFile": "html/ownerIndex.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "3161"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"+5vPkPsXv4IRLsj0rbSTtWFZe2B3SYy2Xo/bDYQZL2k=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 08 Apr 2025 14:50:07 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "v7q97qev4g"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-+5vPkPsXv4IRLsj0rbSTtWFZe2B3SYy2Xo/bDYQZL2k="
+        },
+        {
+          "Name": "label",
+          "Value": "html/ownerIndex.html"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Owner Panel</title>
+</head>
+<body>
+    <h1>Owner Panel</h1>
+
+    <!-- View Orders -->
+    <section>
+        <h2>All Orders</h2>
+        <button onclick="loadOrders()">Refresh Orders</button>
+        <ul id="ordersList"></ul>
+    </section>
+
+    <hr />
+
+    <!-- Create Order -->
+    <section>
+        <h2>Create New Order</h2>
+        <label>
+            Supplier ID:
+            <input type="number" id="supplierIdInput" />
+        </label>
+        <br>
+        <label>
+            Items (JSON format):
+            <textarea id="itemsInput" rows="4" cols="50">
+[
+  { "productId": 1, "quantity": 5 },
+  { "productId": 2, "quantity": 10 }
+]
+      </textarea>
+        </label>
+        <br>
+        <button onclick="createOrder()">Create Order</button>
+        <p id="createResult"></p>
+    </section>
+
+    <hr />
+
+    <!-- Confirm Delivery -->
+    <section>
+        <h2>Confirm Delivery</h2>
+        <label>
+            Order ID:
+            <input type="number" id="deliveryOrderId" />
+        </label>
+        <button onclick="confirmDelivery()">Confirm</button>
+        <p id="deliveryResult"></p>
+    </section>
+
+    <script>
+    const apiBase = "/api/order";
+
+    function loadOrders() {
+      fetch(apiBase)
+        .then(res => res.json())
+        .then(orders => {
+          const list = document.getElementById("ordersList");
+          list.innerHTML = "";
+          orders.forEach(order => {
+            const li = document.createElement("li");
+            li.textContent = `Order #${order.id} - Supplier ${order.supplierId} - Status: ${order.status}`;
+            list.appendChild(li);
+          });
+        });
+    }
+
+    function createOrder() {
+      const supplierId = parseInt(document.getElementById("supplierIdInput").value);
+      const items = JSON.parse(document.getElementById("itemsInput").value);
+
+      fetch(apiBase, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ supplierId, items })
+      })
+      .then(res => res.json())
+      .then(result => {
+        document.getElementById("createResult").textContent = "Order created: #" + result.id;
+        loadOrders();
+      })
+      .catch(err => {
+        document.getElementById("createResult").textContent = "Error creating order";
+      });
+    }
+
+    function confirmDelivery() {
+      const orderId = parseInt(document.getElementById("deliveryOrderId").value);
+      fetch(`${apiBase}/${orderId}/confirmdelivery`, {
+        method: "PUT"
+      })
+      .then(res => {
+        if (!res.ok) return res.text().then(t => { throw new Error(t) });
+        return res.json();
+      })
+      .then(order => {
+        document.getElementById("deliveryResult").textContent = `Order #${order.id} marked as delivered`;
+        loadOrders();
+      })
+      .catch(err => {
+        document.getElementById("deliveryResult").textContent = "Error: " + err.message;
+      });
+    }
+
+    loadOrders(); // Load on page load
+    </script>
+</body>
+</html>
